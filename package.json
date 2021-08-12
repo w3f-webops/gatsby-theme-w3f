@@ -1,0 +1,15 @@
+{
+		"name": "gatsby-theme-w3f",
+		"private": true,
+		"version": "0.0.1",
+		"main": "gatsby-theme-w3f/index.js",
+		"license": "GPLv3",
+		"scripts": {
+				"build": "yarn workspace example build",
+				"develop": "yarn workspace example develop"
+		},
+		"workspaces": [
+				"gatsby-theme-w3f",
+				"example"
+		]
+}
