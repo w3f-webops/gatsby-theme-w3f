@@ -2,7 +2,6 @@
 		"name": "gatsby-theme-w3f",
 		"private": true,
 		"version": "0.0.1",
-		"main": "gatsby-theme-w3f/index.js",
 		"license": "GPLv3",
 		"scripts": {
 				"build": "yarn workspace example build",
