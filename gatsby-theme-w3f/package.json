@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-theme-w3f",
-  "private": true,
+  "name": "@w3f/gatsby-test",
+  "private": false,
   "description": "w3f gatsby theme",
   "version": "0.0.1",
   "author": "W3F <webops@web3.foundation>",
