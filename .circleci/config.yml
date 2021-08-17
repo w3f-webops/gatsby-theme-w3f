@@ -4,12 +4,13 @@ jobs:
 
   publishPackage:
     docker:
-      - image: web3f/node:v0.1.3
+      - image: node:14
     steps:
       - checkout
       - run:
           name: Publish package
           command: |
+            cd gatsby-theme-w3f
             echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
             yarn
             yarn publish --access public
