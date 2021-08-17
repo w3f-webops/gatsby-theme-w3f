@@ -12,6 +12,7 @@ jobs:
           command: |
             cd gatsby-theme-w3f
             echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+            echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.yarnrc
             yarn
             yarn publish --access public
 
