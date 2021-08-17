@@ -19,7 +19,6 @@ workflows:
   test-deploy:
     jobs:
       - publishPackage:
-          context: npm-publisher
           filters:
             branches:
               only: circleci
