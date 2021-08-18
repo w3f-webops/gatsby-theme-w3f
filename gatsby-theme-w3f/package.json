@@ -2,7 +2,7 @@
   "name": "@w3f/gatsby-theme-w3f",
   "private": false,
   "description": "w3f gatsby theme",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "author": "W3F <webops@web3.foundation>",
   "keywords": [
     "gatsby"
@@ -42,9 +42,7 @@
     "netlify-cms-app": "^2.15.20",
     "prop-types": "^15.7.2",
     "react-helmet": "^6.1.0",
-    "react-i18next": "^11.8.15"
-  },
-  "devDependencies": {
+    "react-i18next": "^11.8.15",
     "gatsby": "^3.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -64,6 +62,7 @@
     "prettier": "^2.2.1",
     "sass": "^1.32.8"
   },
+  "devDependencies": {},
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
