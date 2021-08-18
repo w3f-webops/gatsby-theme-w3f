@@ -26,7 +26,12 @@ module.exports = ({
     },
     /* use sass instead of css */
     {
-      resolve: 'gatsby-plugin-sass',
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        sassOptions: {
+          includePaths: ['src/styles/scss'],
+        }
+      },
     },
 
     /* Progressive Web App + Offline functionality
