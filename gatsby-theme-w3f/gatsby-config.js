@@ -1,3 +1,6 @@
+/* to resolve "site" paths (vs. theme paths) */
+require('path')
+
 /* read the `.env.*` files, gatsby builtin */
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
@@ -79,7 +82,7 @@ module.exports = ({
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `media`,
-        path: `${__dirname}/media`,
+        path: path.resolve('media'),
       },
     },
 
@@ -120,7 +123,7 @@ module.exports = ({
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `content`,
-        path: `./content/`,
+        path: path.resolve('content'),
       },
     },
 
@@ -128,7 +131,7 @@ module.exports = ({
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/locales`,
+        path: path.resolve('locales'),
         name: `locale`,
       },
     },

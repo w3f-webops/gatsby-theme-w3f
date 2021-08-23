@@ -22,11 +22,11 @@ export const useSiteMenus = () => {
               id
               url
             }
-            legal {
+            network {
               id
               url
             }
-            extra {
+            community {
               id
               url
             }
