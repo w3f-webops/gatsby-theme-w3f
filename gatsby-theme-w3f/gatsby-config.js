@@ -1,11 +1,12 @@
-/* to resolve "site" paths (vs. theme paths) */
-require('path')
-
 /* read the `.env.*` files, gatsby builtin */
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
+/* to resolve "site" paths (vs. theme paths) */
+const path = require('path')
+
+/* read the site metadata in '/src/..' so it is gatsby-shadowable */
 const siteMetadata = require('./src/config/siteMetadata');
 
 /* theme config */
