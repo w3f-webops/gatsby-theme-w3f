@@ -106,7 +106,8 @@ module.exports = ({
           {
             resolve: `gatsby-remark-relative-images`,
             options: {
-              staticFolderName: `${__dirname}`, // `/media/` already in img.src
+              /* `/media/` already in img.src */
+              staticFolderName: path.resolve('.'),
               include: ['featured_image', 'markdownremark']
             },
           },
