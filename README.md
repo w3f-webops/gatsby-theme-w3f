@@ -52,3 +52,37 @@ You can run the example project with:
 ```shell
 yarn workspace example develop
 ```
+
+## Using the theme in a new project
+
+This project is available as [@w3f/gatsby-theme-w3f package](https://www.npmjs.com/package/@w3f/gatsby-theme-w3f) on npm repository.
+
+### Installation
+
+To use this theme, install it in a project, as a npm module: `npm i
+@w3f/gatsby-theme-w3f`.
+
+### Customization of existing theme files
+
+You can overide existing theme files in your project directory
+structure. For this, we use the [Gatsby shadowing
+technique](https://www.gatsbyjs.com/docs/how-to/plugins-and-themes/shadowing/),
+at the path `./src/@w3f/gatsby-theme-w3f/` of your project.
+
+
+> For example, to overide the theme file
+> `./src/components/HeaderNav.js`, we can create the file
+> `./src/@w3f/gatsby-theme-w3f/components/HeaderNav.js` in our
+> project.
+
+The same goes for every other theme files.
+
+### Develop new project features/pages
+
+If you'd like to develop other features (pages, components etc.) in
+your project, you can do it as usual for every other gatsby projects,
+in its `./src/` folder.
+
+Otherwise, to emphasize modularity, you can develop the independant
+features, as [Gatsby local
+plugins](https://www.gatsbyjs.com/docs/creating-a-local-plugin/).
