@@ -86,3 +86,10 @@ in its `./src/` folder.
 Otherwise, to emphasize modularity, you can develop the independant
 features, as [Gatsby local
 plugins](https://www.gatsbyjs.com/docs/creating-a-local-plugin/).
+
+### Debug
+
+To debug yarn workspaces on which this theme development is based, you
+can use the command `yarn workspaces info` in the project's root
+folder ([see
+docs](https://www.gatsbyjs.com/tutorial/building-a-theme/)).

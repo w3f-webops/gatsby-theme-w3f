@@ -14,14 +14,6 @@ export const useSiteMenus = () => {
               id
               url
             }
-            build {
-              id
-              url
-            }
-            learn {
-              id
-              url
-            }
           }
         }
       }

@@ -6,21 +6,25 @@ const main = [
     id: 'home',
   },
   {
-    url: '/learn',
-    id: 'learn',
+    url: '/blog',
+    id: 'blog',
   },
-  {
-    url: '/build',
-    id: 'build',
-  },
-  {
-    url: '/network',
-    id: 'network',
-  },
-  {
-    url: '/community',
-    id: 'community',
-  },
+  /* {
+   *   url: '/learn',
+   *   id: 'learn',
+   * },
+   * {
+   *   url: '/build',
+   *   id: 'build',
+   * },
+   * {
+   *   url: '/network',
+   *   id: 'network',
+   * },
+   * {
+   *   url: '/community',
+   *   id: 'community',
+   * }, */
 ];
 
 /* sub menus, matching the main menu items' "id" */

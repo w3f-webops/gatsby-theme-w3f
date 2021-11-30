@@ -6,6 +6,7 @@ import Layout from '../components/site/Layout';
 import SEO from '../components/site/SEO';
 
 export default function BlogPostPage({ data }) {
+  console.log('blog single template data', data);
   const { markdownRemark } = data;
   return (
     <Layout>
@@ -38,6 +39,21 @@ export const query = graphql`
         featured_image {
           childImageSharp {
             gatsbyImageData(width: 1200, placeholder: NONE, formats: [AUTO, WEBP, AVIF])
+          }
+        }
+      }
+    }
+    latestPosts: allMarkdownRemark(
+      filter: { fields: { langKey: { eq: $language } }, fileAbsolutePath: { regex: "//(posts)/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            tags
+          }
+          fields {
+            slug
           }
         }
       }

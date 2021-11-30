@@ -9,7 +9,6 @@ const BlogSingle = ({ model }) => {
   const { frontmatter, html } = model;
   const { title, tags, featured_image } = frontmatter;
   const imageData = getImage(featured_image);
-  console.log(frontmatter);
 
   return (
     <article>

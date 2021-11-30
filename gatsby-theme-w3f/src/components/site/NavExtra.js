@@ -10,19 +10,21 @@ const NavExtra = () => {
   return (
     <nav>
       <ul>
-        {menus.extra.map(menuItem => {
-          return (
-            <li key={menuItem.id}>
-              <span>
-                <Link to={menuItem.url}>
-                  {t(menuItem.id, {
-                    fallbackLng: 'en',
-                  })}
-                </Link>
-              </span>
-            </li>
-          );
-        })}
+        {menus.extra
+          ? menus.extra.map(menuItem => {
+              return (
+                <li key={menuItem.id}>
+                  <span>
+                    <Link to={menuItem.url}>
+                      {t(menuItem.id, {
+                        fallbackLng: 'en',
+                      })}
+                    </Link>
+                  </span>
+                </li>
+              );
+            })
+          : null}
       </ul>
     </nav>
   );
