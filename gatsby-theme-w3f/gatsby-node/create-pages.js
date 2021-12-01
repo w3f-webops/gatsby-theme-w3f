@@ -46,6 +46,9 @@ const createBlogPages = async ({ graphql, actions }) => {
       component: require.resolve(`../src/templates/blog-post.js`),
       context: {
         slug: node.fields.slug,
+        /* pass down the tags to the template,
+           so we can get "related" posts */
+        tags: node.frontmatter.tags
       },
     });
   });

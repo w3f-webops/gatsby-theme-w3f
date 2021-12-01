@@ -18,7 +18,7 @@ export default function BlogPostPage({ data }) {
 }
 
 export const query = graphql`
-  query ($slug: String!, $language: String) {
+  query ($slug: String!, $language: String, $tags: [String!]) {
     locales: allLocale {
       edges {
         node {
@@ -46,6 +46,7 @@ export const query = graphql`
       }
     }
     latestPosts: allMarkdownRemark(
+      sort: { order: DESC, fields: frontmatter___created_at }
       filter: { fields: { langKey: { eq: $language } }, fileAbsolutePath: { regex: "//(posts)/" } }
     ) {
       edges {
@@ -62,7 +63,12 @@ export const query = graphql`
       }
     }
     relatedPosts: allMarkdownRemark(
-      filter: { fields: { langKey: { eq: $language } }, fileAbsolutePath: { regex: "//(posts)/" } }
+      sort: { order: DESC, fields: frontmatter___created_at }
+      filter: {
+        fields: { langKey: { eq: $language } }
+        fileAbsolutePath: { regex: "//(posts)/" }
+        frontmatter: { tags: { in: $tags } }
+      }
     ) {
       edges {
         node {
