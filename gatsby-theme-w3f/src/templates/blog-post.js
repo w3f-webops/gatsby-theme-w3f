@@ -37,6 +37,7 @@ export const query = graphql`
         title
         slug
         tags
+        created_at
         featured_image {
           childImageSharp {
             gatsbyImageData(width: 1200, placeholder: NONE, formats: [AUTO, WEBP, AVIF])
@@ -52,6 +53,7 @@ export const query = graphql`
           frontmatter {
             title
             tags
+            created_at
           }
           fields {
             slug
@@ -67,6 +69,7 @@ export const query = graphql`
           frontmatter {
             title
             tags
+            created_at
           }
           fields {
             slug

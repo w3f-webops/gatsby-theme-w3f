@@ -7,8 +7,19 @@ const BlogPage = ({ model, relatedPosts, latestPosts }) => {
   return (
     <div>
       <BlogSingle model={model} />
-      <BlogList models={relatedPosts} />
-      <BlogList models={latestPosts} />
+
+      {relatedPosts ? (
+        <section>
+          <h1>Related Posts</h1>
+          <BlogList models={relatedPosts} />
+        </section>
+      ) : null}
+      {latestPosts ? (
+        <section>
+          <h1>Newest Posts</h1>
+          <BlogList models={latestPosts} />
+        </section>
+      ) : null}
     </div>
   );
 };

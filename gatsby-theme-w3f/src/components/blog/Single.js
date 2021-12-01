@@ -7,20 +7,22 @@ import { Link } from '../default/Link';
 const BlogSingle = ({ model }) => {
   const { t } = useTranslation();
   const { frontmatter, html } = model;
-  const { title, tags, featured_image } = frontmatter;
+  const { title, tags, featured_image, created_at } = frontmatter;
   const imageData = getImage(featured_image);
 
   return (
     <article>
       <header>
-        {imageData && <GatsbyImage image={imageData} alt="" />}
         <h1>{title}</h1>
+        <p>{created_at}</p>
+        {imageData && <GatsbyImage image={imageData} alt="" />}
       </header>
       <main>
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </main>
-      <footer>
-        {tags ? (
+      {tags ? (
+        <footer>
+          <h2>Tags</h2>
           <ul>
             {tags.map(tag => (
               <li key={tag}>
@@ -28,8 +30,8 @@ const BlogSingle = ({ model }) => {
               </li>
             ))}
           </ul>
-        ) : null}
-      </footer>
+        </footer>
+      ) : null}
     </article>
   );
 };
