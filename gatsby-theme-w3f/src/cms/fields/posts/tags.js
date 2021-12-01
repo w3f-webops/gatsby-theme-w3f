@@ -2,7 +2,7 @@ export default {
   label: 'Tags',
   name: 'tags',
   widget: 'list',
-  hint: `#tags (without #) that represent this data model`,
+  hint: `#tags (without #) that represent this data model; if a tag does not exist in the list, create it as a new "tag" data model`,
   required: false,
   fields: [
     {
