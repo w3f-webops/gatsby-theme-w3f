@@ -1,17 +1,18 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 
-import BlogSingle from '../components/blog/Single';
+import BlogPage from '../components/blog/Page';
 import Layout from '../components/site/Layout';
 import SEO from '../components/site/SEO';
 
 export default function BlogPostPage({ data }) {
-  console.log('blog single template data', data);
-  const { markdownRemark } = data;
+  const { markdownRemark, latestPosts, relatedPosts } = data;
   return (
     <Layout>
       <SEO title="Post" />
-      {markdownRemark && <BlogSingle model={markdownRemark} />}
+      {markdownRemark ? (
+        <BlogPage model={markdownRemark} latestPosts={latestPosts.edges} relatedPosts={relatedPosts.edges} />
+      ) : null}
     </Layout>
   );
 }
@@ -44,6 +45,21 @@ export const query = graphql`
       }
     }
     latestPosts: allMarkdownRemark(
+      filter: { fields: { langKey: { eq: $language } }, fileAbsolutePath: { regex: "//(posts)/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            tags
+          }
+          fields {
+            slug
+          }
+        }
+      }
+    }
+    relatedPosts: allMarkdownRemark(
       filter: { fields: { langKey: { eq: $language } }, fileAbsolutePath: { regex: "//(posts)/" } }
     ) {
       edges {
