@@ -1,3 +1,4 @@
+import index from '../fields/categories/index';
 import slug from '../fields/categories/slug';
 import title from '../fields/categories/title';
 
@@ -12,7 +13,7 @@ const categories = {
   editor: {
     preview: false,
   },
-  fields: [slug, title],
+  fields: [title, slug, index],
   description: 'Categories, general topics used for blog posts.',
 };
 

@@ -1,36 +1,39 @@
 import { graphql } from 'gatsby';
-import { Link, useTranslation } from 'gatsby-plugin-react-i18next';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 import React from 'react';
 
-import BlogList from '../components/blog/List';
+import ListPosts from '../components/blog/List';
+import ListCategories from '../components/blog/ListCategories';
 import Layout from '../components/site/Layout';
 import SEO from '../components/site/SEO';
 
 export default function BlogPage({ data }) {
   const posts = data.allPosts.edges;
   const featuredPosts = data.featuredPosts.edges;
+  const allCategories = data.allCategories.edges;
   const { t } = useTranslation();
   return (
     <Layout>
       <SEO title="Posts" />
       <header>
         <h1>{t('posts.title')}</h1>
-        <nav>
-          <Link to="/tags">{t('tags.title')}</Link>
-        </nav>
+        {allCategories ? <ListCategories models={allCategories} /> : null}
       </header>
-      {featuredPosts ? (
-        <section>
-          <h1>Featured posts</h1>
-          <BlogList models={featuredPosts} />
-        </section>
-      ) : null}
-      {posts ? (
-        <section>
-          <h1>All posts</h1>
-          <BlogList models={posts} />
-        </section>
-      ) : null}
+
+      <main>
+        {featuredPosts ? (
+          <section>
+            <h1>Featured posts</h1>
+            <ListPosts models={featuredPosts} />
+          </section>
+        ) : null}
+        {posts ? (
+          <section>
+            <h1>All posts</h1>
+            <ListPosts models={posts} />
+          </section>
+        ) : null}
+      </main>
     </Layout>
   );
 }
@@ -43,6 +46,24 @@ export const query = graphql`
           ns
           data
           language
+        }
+      }
+    }
+    allCategories: allMarkdownRemark(
+      sort: { order: DESC, fields: frontmatter___index }
+      filter: { fields: { langKey: { eq: $language } }, fileAbsolutePath: { regex: "//(categories)/" } }
+    ) {
+      edges {
+        node {
+          html
+          frontmatter {
+            title
+            index
+          }
+          fields {
+            langKey
+            slug
+          }
         }
       }
     }
