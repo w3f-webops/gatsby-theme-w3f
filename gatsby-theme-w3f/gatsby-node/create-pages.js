@@ -48,7 +48,7 @@ const createBlogPages = async ({ graphql, actions }) => {
         slug: node.fields.slug,
         /* pass down the tags to the template,
            so we can get "related" posts */
-        tags: node.frontmatter.tags
+        tags: node.frontmatter.tags,
       },
     });
   });

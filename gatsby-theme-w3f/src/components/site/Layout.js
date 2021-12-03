@@ -1,3 +1,6 @@
+/* import our js web-components */
+import '../../web-components/index.js';
+
 import React from 'react';
 
 import Footer from './Footer';

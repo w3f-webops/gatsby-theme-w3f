@@ -1,5 +1,6 @@
 import CMS from 'netlify-cms-app';
 
+import { LinkCTA } from './editor-components';
 import options from './options';
 
 const netlifyCmsGitLocal = process.env.GATSBY_NETLIFY_CMS_GIT_LOCAL === 'true';
@@ -26,4 +27,8 @@ if (netlifyCmsGitLocal) {
    * }; */
 }
 
+/* initialize the CMS editor-components*/
+CMS.registerEditorComponent(LinkCTA);
+
+/* initialize the CMS with its config */
 CMS.init(options);
