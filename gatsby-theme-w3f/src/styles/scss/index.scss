@@ -1,5 +1,10 @@
-$pink: #e6007a;
+@import './variables';
 
-a {
-  color: $pink;
-}
+/* layout */
+@import './layout/index';
+
+/* html elements */
+@import './components/anchors';
+
+/* custom-elements */
+@import './components/custom-elements';
