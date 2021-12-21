@@ -22,7 +22,7 @@ const posts = {
   editor: {
     preview: false,
   },
-  fields: [title, slug, tags, categories, createdAt, isFeatured, featuredImage, excerpt, body, authors],
+  fields: [createdAt, title, slug, isFeatured, featuredImage, excerpt, body, tags, categories, authors],
   description:
     'The posts, are blog articles. They all should be here written in English (translations are then automatically made externally).',
 };

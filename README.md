@@ -86,3 +86,22 @@ in its `./src/` folder.
 Otherwise, to emphasize modularity, you can develop the independant
 features, as [Gatsby local
 plugins](https://www.gatsbyjs.com/docs/creating-a-local-plugin/).
+
+### Use netlify-cms on the example site
+
+In a new shell (aside the local development environment for this
+project), run the commands:
+
+- `cd example`
+- `npx netlify-cms-proxy-server`
+
+> Note: if you want to use netlify-cms against the local repository
+> (instead of the one on the remote), in `./example/.env.development`,
+> add the line `GATSBY_NETLIFY_CMS_GIT_LOCAL=true`.
+
+### Debug
+
+To debug yarn workspaces on which this theme development is based, you
+can use the command `yarn workspaces info` in the project's root
+folder ([see
+docs](https://www.gatsbyjs.com/tutorial/building-a-theme/)).

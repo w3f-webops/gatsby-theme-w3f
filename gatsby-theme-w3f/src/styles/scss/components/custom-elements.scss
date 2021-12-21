@@ -1,0 +1,16 @@
+/* netlify-cms; registered editor components */
+w3f-link-cta {
+  border: 0.1rem solid $blue;
+  display: block;
+
+  a {
+    display: block;
+    color: $blue;
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-decoration: none;
+    &:hover {
+      color: $pink;
+    }
+  }
+}

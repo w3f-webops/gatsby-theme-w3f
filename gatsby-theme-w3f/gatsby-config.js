@@ -4,7 +4,7 @@ require('dotenv').config({
 });
 
 /* to resolve "site" paths (vs. theme paths) */
-const path = require('path')
+const path = require('path');
 
 /* read the site metadata in '/src/..' so it is gatsby-shadowable */
 const siteMetadata = require('./src/config/siteMetadata');
@@ -13,7 +13,7 @@ const siteMetadata = require('./src/config/siteMetadata');
 module.exports = ({
   /* theme options, passed from the project it is imported in */
   i18nLanguages = ['en'],
-  siteUrl = 'https://example.com/'
+  siteUrl = 'https://example.com/',
 }) => ({
   siteMetadata,
   plugins: [
@@ -34,7 +34,7 @@ module.exports = ({
       options: {
         sassOptions: {
           includePaths: ['src/styles/scss'],
-        }
+        },
       },
     },
 
@@ -108,7 +108,7 @@ module.exports = ({
             options: {
               /* `/media/` already in img.src */
               staticFolderName: path.resolve('.'),
-              include: ['featured_image', 'markdownremark']
+              include: ['featured_image', 'markdownremark'],
             },
           },
           // gatsby-remark-relative-images must go before gatsby-remark-images

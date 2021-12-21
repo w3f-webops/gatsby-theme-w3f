@@ -1,0 +1,9 @@
+/* links */
+a {
+  color: $text;
+
+  /* make a default style for links pointing to current page (active) */
+  &[aria-current="page"] {
+    color: $pink;
+  }
+}

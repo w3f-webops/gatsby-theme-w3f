@@ -3,5 +3,5 @@ export default {
   name: 'body',
   widget: 'markdown',
   required: false,
-  hint: 'Free text and medias.',
+  hint: 'Free text and medias that compose the heart of this blog post.',
 };

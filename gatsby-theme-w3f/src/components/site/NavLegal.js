@@ -7,7 +7,7 @@ import { Link } from '../default/Link';
 const HeaderNav = () => {
   const { t } = useTranslation();
   const { menus } = useSiteMenus();
-  return (
+  return menus.legal ? (
     <nav>
       <ul>
         {menus.legal.map(menuItem => {
@@ -21,7 +21,7 @@ const HeaderNav = () => {
         })}
       </ul>
     </nav>
-  );
+  ) : null;
 };
 
 export default HeaderNav;

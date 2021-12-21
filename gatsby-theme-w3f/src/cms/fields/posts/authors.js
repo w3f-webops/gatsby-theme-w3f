@@ -3,7 +3,7 @@ export default {
   name: 'authors',
   widget: 'list',
   required: false,
-  hint: 'The persons authoring this content',
+  hint: 'The persons authoring this content; if person does not exist, create it in the "authors" data model.',
   fields: [
     {
       label: 'Author',

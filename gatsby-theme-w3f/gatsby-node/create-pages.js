@@ -1,5 +1,3 @@
-const path = require('path');
-
 /*
    Notes:
    - all graphql function call returns a Promise
@@ -40,7 +38,7 @@ const createBlogPages = async ({ graphql, actions }) => {
       }
     }
   `);
-  if (!result || !result.data) return
+  if (!result || !result.data) return;
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
@@ -48,6 +46,9 @@ const createBlogPages = async ({ graphql, actions }) => {
       component: require.resolve(`../src/templates/blog-post.js`),
       context: {
         slug: node.fields.slug,
+        /* pass down the tags to the template,
+           so we can get "related" posts */
+        tags: node.frontmatter.tags,
       },
     });
   });
@@ -82,7 +83,7 @@ const createBlogTagsPages = async ({ graphql, actions }) => {
       }
     }
   `);
-  if (!result || !result.data) return
+  if (!result || !result.data) return;
 
   /* create a page for each tag, with all articles with this tag */
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
