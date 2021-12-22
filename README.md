@@ -59,8 +59,7 @@ This project is available as [@w3f/gatsby-theme-w3f package](https://www.npmjs.c
 
 ### Installation
 
-To use this theme, install it in a project, as a npm module: `npm i
-@w3f/gatsby-theme-w3f`.
+To use this theme, install it in a project, as a npm module: `npm i --save @w3f/gatsby-theme-w3f`.
 
 ### Customization of existing theme files
 
