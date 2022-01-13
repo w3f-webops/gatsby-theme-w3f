@@ -6,7 +6,7 @@ import slug from '../fields/authors/slug';
 const posts = {
   format: 'yaml-frontmatter',
   folder: 'content/en/authors',
-  media_folder: '/media/images/authors',
+  media_folder: '/content/media/images/authors',
   public_folder: '/public/images/authors',
   name: 'authors',
   label: 'Authors',

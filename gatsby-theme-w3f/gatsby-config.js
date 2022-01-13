@@ -66,7 +66,7 @@ module.exports = ({
         theme_color: `#e6007a`,
         display: `minimal-ui`,
         /* icon path is relative to the root of the site. */
-        icon: `media/favicon/favicon.png`,
+        icon: `content/media/favicon/favicon.png`,
       },
     },
 
@@ -94,7 +94,7 @@ module.exports = ({
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `media`,
-        path: path.resolve('media'),
+        path: path.resolve('content/media'),
       },
     },
 
@@ -118,7 +118,7 @@ module.exports = ({
             resolve: `gatsby-remark-relative-images`,
             options: {
               /* `/media/` already in img.src */
-              staticFolderName: path.resolve('.'),
+              staticFolderName: path.resolve('./content'),
               include: ['featured_image', 'markdownremark'],
             },
           },
@@ -136,7 +136,7 @@ module.exports = ({
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `content`,
-        path: path.resolve('content'),
+        path: path.resolve('content/md'),
       },
     },
 
@@ -144,7 +144,7 @@ module.exports = ({
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: path.resolve('locales'),
+        path: path.resolve('content/locales'),
         name: `locale`,
       },
     },
@@ -178,6 +178,10 @@ module.exports = ({
         modulePath: `${__dirname}/src/cms/index.js`,
         /* use netlify-identity widget to login */
         enableIdentityWidget: true,
+        publicPath: `admin`,
+        htmlTitle: `Content Manager`,
+        htmlFavicon: `content/media/favicon/favicon.png`,
+        includeRobots: false,
       },
     },
   ],

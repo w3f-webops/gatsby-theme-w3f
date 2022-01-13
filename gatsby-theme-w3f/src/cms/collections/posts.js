@@ -11,8 +11,8 @@ import title from '../fields/posts/title';
 
 const posts = {
   format: 'yaml-frontmatter',
-  folder: 'content/en/posts',
-  media_folder: '/media/images/posts',
+  folder: 'content/md/en/posts',
+  media_folder: '/content/media/images/posts',
   public_folder: '/media/images/posts',
   name: 'posts',
   label: 'Posts',
