@@ -75,3 +75,9 @@ You can run the example project with:
 ```shell
 yarn workspace example develop
 ```
+
+### Notes
+
+This project's `package.json` version, is not used for anything, nor is the one from the example project.
+
+Only the one from the theme folder is important for releasing new versions to npm.
