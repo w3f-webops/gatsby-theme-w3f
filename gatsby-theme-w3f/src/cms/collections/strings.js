@@ -1,15 +1,10 @@
-import menus from '../../../locales/en/menus.json';
-import translations from '../../../locales/en/translations.json';
+import translations from '../../../content/locales/en/translations.json';
 
 /* model-strings is the model responsible for english (en) language strings */
 
 /* List of file names (without .json extension)
  * and the object with all language strings */
 const stringFiles = [
-  {
-    name: 'menus',
-    strings: menus,
-  },
   {
     name: 'translations',
     strings: translations,
