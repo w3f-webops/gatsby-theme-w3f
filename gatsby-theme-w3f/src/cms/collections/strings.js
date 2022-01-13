@@ -17,7 +17,7 @@ const buildFiles = files => {
     return {
       name: file.name,
       label: file.name,
-      file: `locales/en/${file.name}.json`,
+      file: `content/locales/en/${file.name}.json`,
       fields: buildFields(file.strings),
     };
   });

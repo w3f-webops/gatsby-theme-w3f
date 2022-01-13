@@ -8,12 +8,14 @@ const cmsOptions = {
 
     // both folder values, are overwritten
     // by some local collections config
-    media_folder: '/media',
+    media_folder: '/content/media',
     public_folder: '/public',
 
-    // re-defined in ./index.js, from env
-    backend: undefined,
-    local_backend: false,
+    // re-defined in ./index.js, from env (for local backend)
+    backend: {
+      name: 'test-repo',
+      branch: 'main',
+    },
   },
 };
 

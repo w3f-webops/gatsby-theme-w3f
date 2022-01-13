@@ -178,6 +178,10 @@ module.exports = ({
         modulePath: `${__dirname}/src/cms/index.js`,
         /* use netlify-identity widget to login */
         enableIdentityWidget: true,
+        publicPath: `admin`,
+        htmlTitle: `Content Manager`,
+        htmlFavicon: `content/media/favicon/favicon.png`,
+        includeRobots: false,
       },
     },
   ],

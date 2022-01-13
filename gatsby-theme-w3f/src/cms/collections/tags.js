@@ -3,7 +3,7 @@ import slug from '../fields/tags/slug';
 
 const tags = {
   format: 'yaml-frontmatter',
-  folder: 'content/en/tags',
+  folder: 'content/md/en/tags',
   name: 'tags',
   label: 'Tags',
   label_singular: 'Tag',
