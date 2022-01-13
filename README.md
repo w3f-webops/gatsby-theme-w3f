@@ -1,10 +1,14 @@
-This repository is a gatsby theme, that can be used/installed as a
+This repository is a gatsby theme development project. The theme (not the example folder) can be used/installed as a
 gatsby plugin in an other gatsby project.
 
-Gatsby theme take advantage of `yarn` and its `workspace` feature, to
-offer ease of development.
+## Installation
 
-## Development
+To use this theme in a project, read the docs at `./gatsby-theme-w3f/readme.md`; this project is available as [@w3f/gatsby-theme-w3f package](https://www.npmjs.com/package/@w3f/gatsby-theme-w3f) on npm repository.
+
+## Development (of the theme & example project)
+
+Gatsby theme take advantage of `yarn` and its `workspace` feature, to
+	offer ease of development.
 
 To develop locally on the theme, run the following commands from the
 root of this repository:
@@ -19,7 +23,26 @@ yarn workspace example develop
 > When the example is running, it will use the theme folder (inside
 > this repository), as a gatsby module
 
-## Repository Layout
+### Use netlify-cms on the example site
+
+In a new shell (aside the local development environment for this
+project), run the commands:
+
+- `cd example`
+- `npx netlify-cms-proxy-server`
+
+> Note: if you want to use netlify-cms against the local repository
+> (instead of the one on the remote), in `./example/.env.development`,
+> add the line `GATSBY_NETLIFY_CMS_GIT_LOCAL=true`.
+
+### Debug
+
+To debug yarn workspaces on which this theme development is based, you
+can use the command `yarn workspaces info` in the project's root
+folder ([see
+docs](https://www.gatsbyjs.com/tutorial/building-a-theme/)).
+
+## Repository Layout (theme & example project)
 
 This repository, has two projects in two folders, the theme, and a theme example.
 
@@ -52,55 +75,3 @@ You can run the example project with:
 ```shell
 yarn workspace example develop
 ```
-
-## Using the theme in a new project
-
-This project is available as [@w3f/gatsby-theme-w3f package](https://www.npmjs.com/package/@w3f/gatsby-theme-w3f) on npm repository.
-
-### Installation
-
-To use this theme, install it in a project, as a npm module: `npm i --save @w3f/gatsby-theme-w3f`.
-
-### Customization of existing theme files
-
-You can overide existing theme files in your project directory
-structure. For this, we use the [Gatsby shadowing
-technique](https://www.gatsbyjs.com/docs/how-to/plugins-and-themes/shadowing/),
-at the path `./src/@w3f/gatsby-theme-w3f/` of your project.
-
-
-> For example, to overide the theme file
-> `./src/components/HeaderNav.js`, we can create the file
-> `./src/@w3f/gatsby-theme-w3f/components/HeaderNav.js` in our
-> project.
-
-The same goes for every other theme files.
-
-### Develop new project features/pages
-
-If you'd like to develop other features (pages, components etc.) in
-your project, you can do it as usual for every other gatsby projects,
-in its `./src/` folder.
-
-Otherwise, to emphasize modularity, you can develop the independant
-features, as [Gatsby local
-plugins](https://www.gatsbyjs.com/docs/creating-a-local-plugin/).
-
-### Use netlify-cms on the example site
-
-In a new shell (aside the local development environment for this
-project), run the commands:
-
-- `cd example`
-- `npx netlify-cms-proxy-server`
-
-> Note: if you want to use netlify-cms against the local repository
-> (instead of the one on the remote), in `./example/.env.development`,
-> add the line `GATSBY_NETLIFY_CMS_GIT_LOCAL=true`.
-
-### Debug
-
-To debug yarn workspaces on which this theme development is based, you
-can use the command `yarn workspaces info` in the project's root
-folder ([see
-docs](https://www.gatsbyjs.com/tutorial/building-a-theme/)).
