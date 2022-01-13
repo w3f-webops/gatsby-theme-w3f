@@ -18,14 +18,10 @@ const Link = ({ to, title, children, ...other }) => {
   }
 };
 
-const buildSubMenu = (menus, item) => {
-  return menus[item.id];
-};
-
 const testExternalLink = href => {
   const regex = new RegExp('^(http|https)://', 'i');
   const match = regex.test(href);
   return match;
 };
 
-export { Link, buildSubMenu };
+export { Link };

@@ -5,17 +5,27 @@ require('dotenv').config({
 
 /* to resolve "site" paths (vs. theme paths) */
 const path = require('path');
-
-/* read the site metadata in '/src/..' so it is gatsby-shadowable */
-const siteMetadata = require('./src/config/siteMetadata');
-
 /* theme config */
 module.exports = ({
   /* theme options, passed from the project it is imported in */
   i18nLanguages = ['en'],
   siteUrl = 'https://example.com/',
 }) => ({
-  siteMetadata,
+  siteMetadata: {
+    title: `Gatsby theme`,
+    title_meta: `Gatsby theme`,
+    description: `A website for Gatsby w3f theme`,
+    image_og: '',
+    siteUrl: 'https://example.com',
+    author: 'w3f',
+    email: 'test@example.com',
+    reddit: 'https://www.reddit.com',
+    twitter: 'https://twitter.com',
+    youtube: 'https://www.youtube.com',
+    discord: 'https://discord.gg',
+    linkedIn: 'https://www.linkedin.com',
+    github: 'https://github.com',
+  },
   plugins: [
     /* Custom ESLint to your Gatsby dev environment  */
     {
@@ -69,6 +79,7 @@ module.exports = ({
       },
     },
 
+    /* svg, to be used inline, are in the src folder (as they are code/xml) */
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {

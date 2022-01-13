@@ -1,14 +1,12 @@
 import React from 'react';
 
-import NavExtra from './NavExtra';
-import NavMain from './NavMain';
+import Nav from './Nav';
 import SelectLanguage from './SelectLanguage';
 
 const Header = () => {
   return (
     <header>
-      <NavMain />
-      <NavExtra />
+      <Nav />
       <nav>
         <SelectLanguage />
       </nav>
