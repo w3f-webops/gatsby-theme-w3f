@@ -1,14 +1,15 @@
-import CMS from 'netlify-cms-app';
+import CMS from "netlify-cms-app";
 
-import { LinkCTA } from './editor-components';
-import options from './options';
+import { LinkCTA } from "@w3f/gatsby-theme-w3f/src/cms/editor-components";
 
-const netlifyCmsGitLocal = process.env.GATSBY_NETLIFY_CMS_GIT_LOCAL === 'true';
+import options from "./options";
+
+const netlifyCmsGitLocal = process.env.GATSBY_NETLIFY_CMS_GIT_LOCAL === "true";
 
 if (netlifyCmsGitLocal) {
   options.config.local_backend = true;
   options.config.backend = {
-    name: 'git-gateway',
+    name: "git-gateway",
   };
 }
 

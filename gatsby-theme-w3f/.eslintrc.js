@@ -29,10 +29,10 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    'simple-import-sort/imports': 'error',
+    'simple-import-sort/imports': 'off',
     // Disable prop-types
     'react/prop-types': 'off',
     // Enable prettier rules
-    'prettier/prettier': 'error',
+    'prettier/prettier': 'off',
   },
 };
