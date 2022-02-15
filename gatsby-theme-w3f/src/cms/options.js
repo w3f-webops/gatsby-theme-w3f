@@ -1,8 +1,10 @@
 import collections from './collections/index';
 
+const {strings} = collections
+
 const cmsOptions = {
   config: {
-    collections,
+    collections: [strings],
     display_url: window.location.origin,
     publish_mode: 'editorial_workflow',
 
