@@ -1,8 +1,11 @@
-import collections from './collections/index';
+/* theme collections */
+import strings from '@w3f/gatsby-theme-w3f/src/cms/collections/strings';
+
+const collections = [strings]
 
 const cmsOptions = {
   config: {
-    collections,
+    collections: collections,
     display_url: window.location.origin,
     publish_mode: 'editorial_workflow',
 

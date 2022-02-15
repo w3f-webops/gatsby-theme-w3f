@@ -175,7 +175,7 @@ module.exports = ({
         /* call the js file, instead of yaml */
         manualInit: true,
         /* Netlify CMS customization code directory. */
-        modulePath: `${__dirname}/src/cms/index.js`,
+        modulePath: path.resolve('src/cms/index.js'),
         /* use netlify-identity widget to login */
         enableIdentityWidget: true,
         publicPath: `admin`,
