@@ -25,15 +25,15 @@ yarn workspace example develop
 
 ### Use netlify-cms on the example site
 
-In a new shell (aside the local development environment for this
+If you want to use netlify-cms against the local repository (instead
+of the one on the remote), in `./example/.env.development`, add the
+line `GATSBY_NETLIFY_CMS_GIT_LOCAL=true`.
+
+Then in a new shell (aside the local development environment for this
 project), run the commands:
 
 - `cd example`
 - `npx netlify-cms-proxy-server`
-
-> Note: if you want to use netlify-cms against the local repository
-> (instead of the one on the remote), in `./example/.env.development`,
-> add the line `GATSBY_NETLIFY_CMS_GIT_LOCAL=true`.
 
 ### Debug
 
