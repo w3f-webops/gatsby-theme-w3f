@@ -12,7 +12,21 @@ This document outlines how the theme is setup, its plugin and configuration.
 
 To use this theme, install it in a project, as a npm module: `npm i --save @w3f/gatsby-theme-w3f`.
 
-## Customization of existing theme files
+In the project's `gatsby-config.js`, the plugin section can then define our theme, and i18n locales like so:
+``` javascript
+plugins: [
+	{
+		resolve: `@w3f/gatsby-theme-w3f`,
+		options: {
+			i18nLanguages: ['en', 'fr']
+		}
+	},
+]
+```
+
+> The first language listed will be the default language.
+
+## Customization of existing theme files (shadowing)
 
 You can overide existing theme files in your project directory
 structure. For this, we use the [Gatsby shadowing
