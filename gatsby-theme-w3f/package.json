@@ -2,7 +2,7 @@
   "name": "@w3f/gatsby-theme-w3f",
   "private": false,
   "description": "w3f gatsby theme",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "author": "W3F <webops@web3.foundation>",
   "keywords": [
     "gatsby"
