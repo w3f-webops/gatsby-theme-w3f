@@ -75,7 +75,7 @@ module.exports = ({
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `icons`,
-        path: `${__dirname}/src/images`,
+        path: path.resolve('src/images/')
       },
     },
 
@@ -84,7 +84,7 @@ module.exports = ({
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
-          include: `${__dirname}/src/images/svgs/`,
+          include: path.resolve('src/images/svgs')
         },
       },
     },
