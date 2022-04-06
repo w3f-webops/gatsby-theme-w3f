@@ -10,7 +10,7 @@ module.exports = ({
   /* theme options, passed from the project it is imported in */
   i18nLanguages = ['en'],
   siteUrl = 'https://example.com/',
-  gatsbyTransformerRemarkInclude: ['featured_image', 'markdownremark', 'image'],
+  gatsbyTransformerRemarkInclude = ['featured_image', 'markdownremark', 'image'],
 }) => ({
   siteMetadata: {
     title: `Gatsby theme`,
