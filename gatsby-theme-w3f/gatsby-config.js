@@ -10,6 +10,7 @@ module.exports = ({
   /* theme options, passed from the project it is imported in */
   i18nLanguages = ['en'],
   siteUrl = 'https://example.com/',
+  gatsbyTransformerRemarkInclude: ['featured_image', 'markdownremark', 'image'],
 }) => ({
   siteMetadata: {
     title: `Gatsby theme`,
@@ -119,7 +120,7 @@ module.exports = ({
             options: {
               /* `/media/` already in img.src */
               staticFolderName: path.resolve('./content'),
-              include: ['featured_image', 'markdownremark', 'image'],
+              include: gatsbyTransformerRemarkInclude,
             },
           },
           // gatsby-remark-relative-images must go before gatsby-remark-images
