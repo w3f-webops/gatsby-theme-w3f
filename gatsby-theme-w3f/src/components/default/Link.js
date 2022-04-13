@@ -19,7 +19,7 @@ const Link = ({ to, title, children, ...other }) => {
 };
 
 const testExternalLink = href => {
-  const regex = new RegExp('^(http|https)://', 'i');
+  const regex = new RegExp('^(http://|https://|mailto:)', 'i');
   const match = regex.test(href);
   return match;
 };
