@@ -18,7 +18,8 @@ plugins: [
 	{
 		resolve: `@w3f/gatsby-theme-w3f`,
 		options: {
-			i18nLanguages: ['en', 'fr']
+			i18nLanguages: ['en', 'fr'],
+			gatsbyTransformerRemarkInclude: ['featured_image', 'markdownremark', 'image'],
 		}
 	},
 ]
